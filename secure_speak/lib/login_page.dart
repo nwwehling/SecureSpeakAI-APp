@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last
-
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -121,7 +119,7 @@ class _LoginPageState extends State<LoginPage> {
                       email: emailController.text,
                       password: passwordController.text,
                     );
-                    Navigator.pushReplacementNamed(context, '/home');
+                    Navigator.pushReplacementNamed(context, '/instagram-login');
                   } on FirebaseAuthException catch (e) {
                     setState(() {
                       if (e.code == 'user-not-found') {

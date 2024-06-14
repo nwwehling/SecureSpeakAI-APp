@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, use_build_context_synchronously, library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
@@ -122,8 +120,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   suffixIcon: IconButton(
                     icon: Icon(
                       _confirmPasswordVisible ? Icons.visibility : Icons.visibility_off,
-                      color: Colors.black,
-                    ),
+                      color: Colors.black),
                     onPressed: () {
                       setState(() {
                         _confirmPasswordVisible = !_confirmPasswordVisible;
@@ -203,7 +200,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           email: emailController.text,
                           password: passwordController.text,
                         );
-                        Navigator.pushReplacementNamed(context, '/home');
+                        Navigator.pushReplacementNamed(context, '/instagram-login');
                       } catch (e) {
                         setState(() {
                           errorMessage = 'Failed to sign up. Please try again.';
@@ -264,7 +261,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/');
+                      Navigator.pushNamed(context, '/login');
                     },
                     child: Text(
                       'Sign in',

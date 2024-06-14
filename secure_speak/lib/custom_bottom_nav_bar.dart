@@ -34,8 +34,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           _buildNavItem(Icons.home, 'Home', 0),
-          _buildNavItem(Icons.assessment, 'Results', 1),
-          _buildNavItem(Icons.settings, 'Settings', 2),
+          _buildNavItem(Icons.settings, 'Settings', 1),
         ],
       ),
     );
